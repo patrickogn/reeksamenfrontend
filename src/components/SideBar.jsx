@@ -26,11 +26,11 @@ function SideBar(props) {
                 <nav>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US4</NavLink>
+                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US4 Create trip</NavLink>
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side5" : "/login"} >Adminside 2</NavLink>
+                        <NavLink to={props.loggedIn ? "/side5" : "/login"} >US4 Create Guide</NavLink>
                     </div>
                     <br/>
                     <div>

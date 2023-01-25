@@ -12,6 +12,7 @@ import Side1 from "./components/Side1.jsx";
 import Side2 from './components/Side2.jsx';
 
 import Side4 from './components/Side4.jsx';
+import Side5 from './components/Side5.jsx';
 
 import apiFacade from "./apiFacade.js";
 import AccessDenied from "./components/AccessDenied.jsx";
@@ -42,6 +43,10 @@ function App() {
 
                    <Route path="side4" element={facade.hasUserAccess('admin', loggedIn) ?
                         <Side4 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
+
+                    <Route path="side5" element={facade.hasUserAccess('admin', loggedIn) ?
+                        <Side5 setErrorMessage={setErrorMessage}/> : <AccessDenied/>}/>
+                       
                    
                        
 
