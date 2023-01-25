@@ -11,9 +11,24 @@ function Side1({setErrorMessage}) {
     facade.fetchData("trip/all", data=> setAllTrips(data), setErrorMessage);
 }, [])
 
-const assignToConference = (e) => {
+const assignToTrip = (e) => {
   setToggle(!toggle)
 }
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  let jsonBody =
+      {
+          bruger_idbruger: id,
+          trip_idtrip: idtrip
+      }
+  console.log(jsonBody)
+  await apiFacade.postData("assignment", (data) => {
+      console.log("User : " + bruger_idbruger.id + " " + trip_idtrip.idtrip + " was successfully created");
+  }, setErrorMessage, jsonBody)
+
+}
+
 
   return (
     <div style={{padding: 30}} className='column middle'>
@@ -46,11 +61,26 @@ const assignToConference = (e) => {
                 <td>{trip.location}</td>
                 <td>{trip.duration}</td>
                 <td>{trip.packinglist}</td>
+                <td><button className="logout" value={dinner.id} onClick={assignToTrip}>Assign to event</button></td>
+
 
             </tr>
         ))}
         </tbody>
     </table>
+
+    {toggle ? (
+                <form onSubmit={handleSubmit}>
+                    <input className="inputLogin" required type="text" placeholder="Family name"
+                           onChange={handleFamily}/>
+                    <br/>
+                    <input className="inputLogin" required type="text" placeholder="Contact info" name="time"
+                           onChange={handleContact}/>
+                    <br/><br/>
+                    <button onClick={handleSubmit} type="submit">Save</button>
+                </form>
+            ) : ""}
+
 </div>
   );
 }

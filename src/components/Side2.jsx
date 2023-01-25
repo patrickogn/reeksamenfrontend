@@ -1,11 +1,10 @@
+
 import React, {useEffect, useState} from 'react';
 import facade from "../apiFacade.js";
-
 function Side2({setErrorMessage}) {
     const [allTrips, setAllTrips] = useState([]);
     const [selectedTripGuides, setSelectedTripGuides] = useState([]);
     const [selectedTripId, setSelectedTripId] = useState(null);
-
     useEffect(() => {
       facade.fetchData("trip/all", data=> setAllTrips(data), setErrorMessage);
     }, [])
@@ -71,4 +70,3 @@ function Side2({setErrorMessage}) {
     );
   }
   export default Side2
-  

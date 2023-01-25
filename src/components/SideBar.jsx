@@ -26,7 +26,7 @@ function SideBar(props) {
                 <nav>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >Create Boat</NavLink>
+                        <NavLink to={props.loggedIn ? "/side4" : "/login"} >US4</NavLink>
                     </div>
                     <br/>
                     <div>
