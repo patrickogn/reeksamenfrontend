@@ -10,11 +10,11 @@ function SideBar(props) {
             <nav>
                 <br/>
                 <div>
-                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>All Trips</NavLink>
+                    <NavLink to= {props.loggedIn ? "/side1": "/login"}>US1</NavLink>
                 </div>
                 <br/>
                 <div>
-                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >Side 2</NavLink>
+                    <NavLink to={props.loggedIn ? "/side2" : "/login"} >US2</NavLink>
                 </div>
                 <br/>
                 <div>
