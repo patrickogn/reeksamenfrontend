@@ -34,7 +34,7 @@ function SideBar(props) {
                     </div>
                     <br/>
                     <div>
-                        <NavLink to={props.loggedIn ? "/side6" : "/login"} >Adminside 3</NavLink>
+                        <NavLink to={props.loggedIn ? "/side6" : "/login"} >US6 Delete Trip</NavLink>
                     </div>
                     <br/>
                     <div>
